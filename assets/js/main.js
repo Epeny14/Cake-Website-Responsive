@@ -61,10 +61,49 @@ const scrollHeader = () => {
 window.addEventListener('scroll', scrollHeader)
 
 /*=============== PRODUCTS SWIPER ===============*/
+const swiperTabs = new Swiper('.product__tabs', {
+    slidesPreview: 'auto',
+})
+
+const swiperProducts = new Swiper('.product__content', {
+    loop: true,
+    spaceBetween: 32,
+    thumbs: {
+        swiper: swiperTabs,
+    }
+})
 
 
 /*=============== NEW SWIPER ===============*/
+const swiperNew = new Swiper('.new__swiper', {
 
+    loop: true,
+    grabCursor: true,
+    centeredSlides: 'auto',
+    slidesPreview: 'auto',
+    speed: 600,
+    effect: 'creative',
+    creativeEffect: {
+        limitProgress: 2,
+        prev: {
+            translate: ['-32%', 0, 0],
+            scale: .58,
+        },
+        next: {
+            translate: ['32%', 0, 0],
+            scale: .58,
+        },
+    },
+
+    navigation: {
+        nextEl: '.new .swiper-button-next',
+        prevEl: '.new .swiper-button-prev',
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+});
 
 /*=============== SHOW SCROLL UP ===============*/
 
