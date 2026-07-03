@@ -710,7 +710,87 @@ img {
 }
 
 /*=============== CONTACT SECTION ===============*/
+.contact {
+  background-color: var(--second-color);
+}
 
+.contact__container {
+  row-gap: 3rem;
+  padding-block: 3rem;
+}
+
+.contact__map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.contact__map {
+  width: 320px;
+  height: 280px;
+  justify-self: center;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.contact__content .section__title {
+  color: var(--white-color);
+}
+
+.contact__data {
+  position: relative;
+  text-align: center;
+  display: grid;
+  row-gap: 2rem;
+}
+
+.contact__title {
+  color: var(--first-color);
+  font-size: var(--h3-font-size);
+  margin-bottom: .5rem;
+}
+
+.contact__address,
+.contact__address :is(span, a) {
+  display: block;
+  color: var(--white-color);
+  font-style: normal;
+}
+
+.contact__social {
+  display: flex;
+  justify-content: center;
+  column-gap: .75rem;
+}
+
+.contact__social-link {
+  color: var(--white-color);
+  font-size: 1.5rem;
+  transition: color .4s;
+}
+
+.contact__social-link:hover {
+  color: var(--first-color);
+}
+
+.contact__data img {
+  position: absolute;
+  width: 30px;
+}
+
+.contact__sticker-1 {
+  right: 2rem;
+  top: 1rem;
+}
+
+.contact__sticker-2 {
+  top: 6rem;
+  left: 3rem;
+}
+
+.contact__sticker-3 {
+  right: 3rem;
+  bottom: -1rem;
+}
 
 /*=============== FOOTER ===============*/
 
@@ -732,6 +812,10 @@ img {
     height: 290px;
 
   }
+
+  .contact__map {
+    width: 100%;
+  }
 }
 
 /* For medium devices <> */
@@ -739,7 +823,8 @@ img {
 
   .home__container,
   .about__container,
-  .new__container {
+  .new__container,
+  .contact__data {
     grid-template-columns: 400px;
     justify-content: center;
   }
@@ -1038,6 +1123,59 @@ img {
     width: 130px;
     top: -4rem;
     left: 4rem;
+  }
+
+  .contact__container {
+    grid-template-columns: 500px 520px;
+    column-gap: 6rem;
+    align-items: center;
+    padding-bottom: 8rem;
+  }
+
+  .contact__map {
+    order: -1;
+    width: 500px;
+    height: 400px;
+    border-radius: 3rem;
+  }
+
+  .contact__content .section__title {
+    text-align: initial;
+    margin-bottom: 3rem;
+  }
+
+  .contact__data {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: initial;
+    gap: 4rem 6rem;
+  }
+
+  .contact__info {
+    text-align: initial;
+  }
+
+  .contact__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: 1rem;
+  }
+
+  .contact__data img {
+    width: 40px;
+  }
+
+  .contact__sticker-1 {
+    right: -2rem;
+    top: 0;
+  }
+
+  .contact__sticker-2 {
+    top: -2rem;
+    left: -4rem;
+  }
+
+  .contact__sticker-3 {
+    right: 14rem;
+    bottom: -5rem;
   }
 }
 
